@@ -107,14 +107,14 @@ const Contact = () => {
             <Card className="border-2 border-gray-200 shadow-lg overflow-hidden h-full">
               <CardContent className="p-0 h-full">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.534!2d77.0!3d8.322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMTknMjEuNiJOIDc3wrAwMCcwMC4wIkU!5e0!3m2!1sen!2sin!4v1"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.534!2d77.01666!3d8.32166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05a9871e3c5c75%3A0x945ae82dc20c14bd!2sRespiratory%20medical%20clinic!5e0!3m2!1sen!2sin!4v1733912800000!5m2!1sen!2sin"
                   width="100%"
                   height="400"
                   style={{ border: 0, minHeight: '400px' }}
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Respiratory Medical Clinic Location - Poovar, Kerala"
+                  title="Respiratory Medical Clinic - Nellimoodu, Poovar, Kerala"
                   className="h-full min-h-[400px]"
                 ></iframe>
                 <div className="p-4 bg-white border-t border-gray-200">
