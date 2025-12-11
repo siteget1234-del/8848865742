@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Phone, MapPin, Mail } from 'lucide-react';
+import { Heart, Phone, MapPin } from 'lucide-react';
 import { clinicData } from '../mock';
 
 const Footer = () => {
@@ -111,7 +111,15 @@ const Footer = () => {
               © {currentYear} {clinicData.name.english}. All rights reserved.
             </p>
             <p className="text-sm text-gray-400 flex items-center">
-              Made with <Heart className="h-4 w-4 text-red-500 mx-1" /> for better respiratory health
+              Made with <Heart className="h-4 w-4 text-red-500 mx-1" /> by{' '}
+              <a
+                href="https://siteget.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-1 text-blue-400 hover:text-blue-300 transition-colors"
+              >
+                Siteget.in
+              </a>
             </p>
           </div>
         </div>

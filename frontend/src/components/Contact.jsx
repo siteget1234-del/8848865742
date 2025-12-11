@@ -14,8 +14,8 @@ const Contact = () => {
   };
 
   const handleDirectionsClick = () => {
-    const address = `${clinicData.contact.address.line1}, ${clinicData.contact.address.line2}, ${clinicData.contact.address.city}, ${clinicData.contact.address.state} ${clinicData.contact.address.pincode}`;
-    window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`, '_blank');
+    // Using the actual Google Maps link provided by the user
+    window.open('https://maps.app.goo.gl/Qh1GEHHAMg1C1mX18', '_blank');
   };
 
   return (
@@ -102,25 +102,29 @@ const Contact = () => {
             </Card>
           </div>
 
-          {/* Map Placeholder / Additional Info */}
+          {/* Map Embed */}
           <div className="space-y-6">
             <Card className="border-2 border-gray-200 shadow-lg overflow-hidden h-full">
               <CardContent className="p-0 h-full">
-                <div className="bg-gradient-to-br from-gray-100 to-gray-200 h-64 md:h-full flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <MapPin className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold text-gray-700 mb-2">Find Us</h3>
-                    <p className="text-sm text-gray-600 mb-4">
-                      {clinicData.contact.address.landmark}
-                    </p>
-                    <Button
-                      className="bg-purple-600 hover:bg-purple-700 text-white transition-colors"
-                      onClick={handleDirectionsClick}
-                    >
-                      <Navigation className="mr-2 h-4 w-4" />
-                      Open in Maps
-                    </Button>
-                  </div>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.534429825384!2d76.99999999999999!3d8.321599999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMTknMTcuOCJOIDc2wrA1OSc1OS45IkU!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                  width="100%"
+                  height="400"
+                  style={{ border: 0, minHeight: '400px' }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Respiratory Medical Clinic Location"
+                  className="h-full min-h-[400px]"
+                ></iframe>
+                <div className="p-4 bg-white border-t border-gray-200">
+                  <Button
+                    className="w-full bg-purple-600 hover:bg-purple-700 text-white transition-colors"
+                    onClick={handleDirectionsClick}
+                  >
+                    <Navigation className="mr-2 h-4 w-4" />
+                    Open in Google Maps
+                  </Button>
                 </div>
               </CardContent>
             </Card>
